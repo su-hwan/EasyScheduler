@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Easy Scheduler</string>
+    <string name="settings">설정</string>
+    <string name="about">About</string>
+    <string name="no_todo">스케줄이 없습니다.</string>
+    <string name="title">제목</string>
+    <string name="remind_me">알림</string>
+    <string name="choose_date">일자</string>
+    <string name="choose_time">시간</string>
+    <string name="remind_date_and_time">알림설정 %1$s, %2$s %3$s</string>
+    <string name="app_version">버전: 1.0</string>
+    <string name="contact_me">contact me</string>
+    <string name="made_by">Made by su-hwan Kim</string>
+    <string name="done_label">종료</string>
+    <string name="date_reminder_default">오늘</string>
+    <string name="date_error_check_again">입력한 날짜가 과거입니다.</string>
+    <string name="night_mode">야간모드</string>
+    <string name="night_mode_on_summary">야간모드 켬</string>
+    <string name="night_mode_off_summary">야간모드 큼</string>
+    <string name="description">내용</string>
+    <string name="email_address">xcoxblue@gmail.com</string>
+
+    <string-array name="snooze_options">
+        <item>10 분</item>
+        <item>30 분</item>
+        <item>1 시간</item>
+    </string-array>
+
+    <string name="snooze">다시 알림</string>
+    <string name="remove">해제</string>
+    <string name="todo_error">할일을 입력하세요</string>
+</resources>
