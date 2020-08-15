@@ -1,7 +1,5 @@
-package su.hwan.easyscheduler.about;
+package su.hwan.easyscheduler.settings;
 
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -16,25 +14,17 @@ import su.hwan.easyscheduler.R;
 import su.hwan.easyscheduler.appdefault.AppDefaultActivity;
 import su.hwan.easyscheduler.util.EasyTheme;
 
-public class AboutActivity extends AppDefaultActivity {
+public class SettingsActivity extends AppDefaultActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String appVersion = "";
-        EasyTheme.setTheme(this);
 
+        EasyTheme.setTheme(this);
         int backIcon = R.drawable.back_icon;
         final Drawable backArrow = getResources().getDrawable(backIcon,this.getTheme());
         if (backArrow != null) {
             backArrow.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
-        }
-        PackageInfo info = null;
-        try {
-            info = getPackageManager().getPackageInfo(getPackageName(), 0);
-            appVersion = info.versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
         }
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -54,6 +44,7 @@ public class AboutActivity extends AppDefaultActivity {
     @NonNull
     @Override
     protected Fragment createInitialFragment() {
-        return AboutFragment.newInstance();
+        return SettingsFragment.newInstance();
     }
+
 }

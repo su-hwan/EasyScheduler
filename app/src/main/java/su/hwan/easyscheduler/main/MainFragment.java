@@ -8,14 +8,15 @@ import androidx.annotation.Nullable;
 
 import su.hwan.easyscheduler.R;
 import su.hwan.easyscheduler.appdefault.AppDefaultFragment;
-import su.hwan.easyscheduler.util.SetTheme;
+import su.hwan.easyscheduler.util.EasyTheme;
 
 public class MainFragment extends AppDefaultFragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        SetTheme.setTheme(this.getActivity());
+
+        EasyTheme.setTheme(this.getActivity());
     }
 
     @Override

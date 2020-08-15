@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import su.hwan.easyscheduler.R;
 import su.hwan.easyscheduler.about.AboutActivity;
 import su.hwan.easyscheduler.appdefault.AppDefaultActivity;
+import su.hwan.easyscheduler.settings.SettingsActivity;
 
 public class MainActivity extends AppDefaultActivity {
 
@@ -22,6 +23,9 @@ public class MainActivity extends AppDefaultActivity {
         final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(false);
+        }
     }
 
     @Override
@@ -43,13 +47,22 @@ public class MainActivity extends AppDefaultActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Class intentClazz = null;
         switch (item.getItemId()) {
             case R.id.menu_about:
-                Intent intent = new Intent(this, AboutActivity.class);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+                intentClazz = AboutActivity.class;
+                break;
+            case R.id.menu_settings:
+                intentClazz = SettingsActivity.class;
+                break;
+        }
+
+        if (intentClazz != null) {
+            Intent intent = new Intent(this, intentClazz);
+            startActivity(intent);
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
 
     }

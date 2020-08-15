@@ -18,15 +18,17 @@
     <string name="night_mode_on_summary">야간모드 켬</string>
     <string name="night_mode_off_summary">야간모드 큼</string>
     <string name="description">내용</string>
-    <string name="email_address">xcoxblue@gmail.com</string>
 
+    <string name="snooze">다시 알림</string>
+
+    <string name="remove">해제</string>
+    <string name="todo_error">할일을 입력하세요</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
     <string-array name="snooze_options">
         <item>10 분</item>
         <item>30 분</item>
         <item>1 시간</item>
     </string-array>
-
-    <string name="snooze">다시 알림</string>
-    <string name="remove">해제</string>
-    <string name="todo_error">할일을 입력하세요</string>
 </resources>
